@@ -368,6 +368,25 @@ public class Picture
 
    ////////////////////// methods ///////////////////////////////////////
 
+public void mirrorImage()
+{
+  //Create a 2D array of pixels
+  Pixel[][] pictures = this.getPixels2D();
+  //Declare mirrorPoint as half the length
+  int mirrorPoint = pictures.length/2;
+  //Loop through each column
+  for (int c = 0; c < pictures[0].length; c++)
+  {
+    //Loop through half the rows
+    for (int r = 0; r < mirrorPoint; r++)
+    {
+      //Copy the color of array[r][c] (top pixel) to array[array[r].length - 1 - r][c]] (bottom pixel)
+      Pixel topPixel = pictures[r][c];
+      Pixel bottomPixel = pictures[pictures.length - 1 - r][c];
+      bottomPixel.setColor(topPixel.getColor());
+    }
+  }
+}
    
 
 
