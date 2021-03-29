@@ -368,6 +368,7 @@ public class Picture
 
    ////////////////////// methods ///////////////////////////////////////
 
+//method by: Kenneth Yeon Period 2
 public void mirrorImage()
 {
   //Create a 2D array of pixels
